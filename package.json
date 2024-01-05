@@ -1,0 +1,43 @@
+{
+  "name": "ddd-sistem-clothes-rental",
+  "engines": {
+    "node": ">=21.5.0",
+    "npm": ">=10.2.5",
+    "yarn": "please-use-npm",
+    "pnpm": "please-use-npm"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.ts --fix",
+    "prepare": "husky install",
+    "first-install": "npm install && npm run prepare",
+    "commit": "cz"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "typescript",
+    "ts",
+    "ddd"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "author": "Vinicius Italo da Cruz",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "husky": "^8.0.3",
+    "init": "0.1.2",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  }
+}
