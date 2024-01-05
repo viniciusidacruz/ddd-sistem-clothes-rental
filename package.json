@@ -7,7 +7,7 @@
     "pnpm": "please-use-npm"
   },
   "scripts": {
-    "lint": "eslint src/**/*.ts --fix",
+    "lint": "eslint src/**/*.ts --fix --max-warnings 0 .",
     "prepare": "husky install",
     "first-install": "npm install && npm run prepare",
     "commit": "cz"
@@ -24,6 +24,12 @@
       "path": "cz-conventional-changelog"
     }
   },
+  "lint-staged": {
+    "*.{ts}": [
+      "lint"
+    ],
+    "*.js": "eslint --cache --fix"
+  },
   "author": "Vinicius Italo da Cruz",
   "license": "MIT",
   "devDependencies": {
@@ -37,6 +43,7 @@
     "eslint-plugin-prettier": "^5.1.2",
     "husky": "^8.0.3",
     "init": "0.1.2",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "typescript": "^5.3.3"
   }
